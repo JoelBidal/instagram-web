@@ -1,0 +1,493 @@
+body{
+    background-color: #fafafa;
+    color: rgba(0, 0, 0, 0.856);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 950px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 2fr  1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+                        "header header"
+                        "stories sidebar"
+                        "contenido sidebar"
+                        "contenido sidebar"
+                        "contenido sidebar"
+                        "footer footer";
+}
+
+
+/* Barra de navegación */
+.contenedor .header{
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.856);
+    height: 54px;
+    grid-column-start: 1 ;
+    grid-column-end: -1 ;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.150);
+}
+
+
+.navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoInstagram{
+    width: 360px;
+    min-width: 40px;
+}
+
+.logoInstagram img{
+    max-width: 100px;
+    padding-top: 10px;
+}
+
+.buscador input{
+    width: 215px;
+    height: 25px;
+}
+
+.herramientas{
+    /* outline: 1px solid; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 360px;
+}
+
+.herramientas a{
+    /* outline: 1px solid; */
+    margin-left: 10px;
+}
+
+.herramientas img{
+    max-width: 32px;
+}
+
+.herramientas .perfil{
+    max-width: 24px;
+}
+
+/* Stories */
+.contenedor .stories{
+    background: #fff;
+    color: rgba(0, 0, 0, 0.856);
+    grid-column-start: 1 ;
+    grid-column-end: 1 ; 
+    margin-top: 64px;
+    margin-bottom: -18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100px;
+    padding: 8px 0;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    border-radius: 3px;
+}
+
+.lateralIzquierdo{margin-left: 12px;}
+
+
+.stories div {
+    /* outline: 1px solid; */
+    display: flex;
+    align-items: center;
+    width: 100px;
+    padding: 0 3px;
+}
+
+.stories .perfil{
+    align-items: center;
+    justify-content: center;
+    max-width: 65px;
+    border: 2px solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-color:linear-gradient(45deg, #ff8400,#72d81e,#dc2743,#cc2366,#bc1888); 
+}
+
+.stories .usuario{
+    text-align: center;
+    padding: 3px 5px;
+    text-decoration: none;
+    font-family: Helvetica;
+    font-weight: lighter;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.829);
+    letter-spacing: .01em;
+}
+
+.stories .usuario h2{
+    padding-top: 4px;
+}
+
+
+
+
+/* Publicaciones del Inicio  */
+
+.contenedor .contenido1{
+    background: #fff;
+    color: rgba(0, 0, 0, 0.856);
+    grid-column-start: 1 ;
+    grid-column-end: 1 ;  
+    grid-row: 3 / 4;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    border-radius: 3px;
+}
+
+.headerPost{
+    /* outline: 1px solid; */
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dataUsuario{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    width: 100px;
+    height: auto;
+}
+
+.headerPost .fotoPerfilUsuario{
+    max-width: 40px;
+    margin-left: 10px;
+    border: 2px solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-color:linear-gradient(45deg, #ff8400,#72d81e,#dc2743,#cc2366,#bc1888); 
+}
+
+.nombreUsuario, .locacion{
+    text-decoration: none;
+    display: block;
+    padding-top: 4px;
+}
+
+.nombreUsuario{
+    color: rgba(0, 0, 0, 0.884);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    line-height: 7px;
+    padding-bottom: 3px;
+}
+
+.locacion{
+    color: rgba(0, 0, 0, 0.678);
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    padding-bottom: 3px;
+}
+
+.opciones{
+    display: flex;
+    justify-content: flex-end;
+    width: 77%;
+}
+
+.opciones .opcionesPublicacion{
+    max-width: 25px;
+    opacity: 80%;
+    padding-right: 10px;
+}
+
+.fotoUsuario img{
+    max-width: 100%;
+}
+
+.likeComentario{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+}
+
+.likeComentario img{
+    max-width: 40px;
+}
+
+.cantidadLikes{
+    padding: 2px 14px;
+}
+
+.cantidadLikes h2{
+    color: rgba(0, 0, 0, 0.856);
+    font-size: 15px;
+    font-family: Helvetica;
+    font-weight: 200;
+}
+
+.cantidadLikes a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.856);
+    font-size: 15px;
+    font-family: Helvetica;
+    font-weight: 600;
+}
+
+.descripcionPublicacion{
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+}
+
+.descripcionPublicacion a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.856);
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    font-family: Helvetica;
+    font-weight: 600;
+}
+
+.descripcionPublicacion p{
+    padding-left: 10px;
+    color: rgba(0, 0, 0, 0.856);
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    font-family: Helvetica;
+    font-weight: 100;
+
+}
+
+.comentariosPublicacion{
+    display: flex;
+    align-items: center;
+    padding: 0px 14px;
+    margin-bottom: 25px;
+}
+
+.comentariosPublicacion a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.856);
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    font-family: Helvetica;
+    font-weight: 600;
+}
+
+.comentariosPublicacion p{
+    padding-left: 10px;
+    color: rgba(0, 0, 0, 0.856);
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    font-family: Helvetica;
+    font-weight: 100;
+}
+
+.comentariosPublicacion span{
+    cursor: pointer;
+    color: #006fb9;
+}
+
+.contenedor .contenido2{
+    background: #fff;
+    color: rgba(0, 0, 0, 0.856);
+    grid-column-start: 1 ;
+    grid-column-end: 1 ;  
+    grid-row: 4 / 5;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    border-radius: 3px;
+}
+
+.contenedor .contenido3{
+    background: #fff;
+    color: rgba(0, 0, 0, 0.856);
+    grid-column-start: 1 ;
+    grid-column-end: 1 ;  
+    grid-row: 5 / 6;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    border-radius: 3px;
+}
+
+/* Sugerencias de perfiles y Terminos de Instagram  */
+.contenedor .sidebarSugerencias{
+    background: #fafafa;
+    color: rgba(0, 0, 0, 0.856);
+    grid-column: 2 / 2;
+    grid-row: 1/ 7;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 62px;
+    }
+
+.sidebarSugerencias .sugerencias{
+    /* outline: 1px solid; */
+    width: 300px;
+    position: fixed;
+    margin-left: 6px;
+}
+
+.fotoPerfilSugerencias{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    /* outline: 1px solid; */
+    margin: 10px 0px;
+}
+
+.fotoPerfilSugerencias .arrobaUsuario{
+    width: 50%;
+    padding-top: 5px;
+}
+
+.fotoPerfilSugerencias a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.856);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+.fotoPerfilSugerencias .name{
+    color: rgba(0, 0, 0, 0.500);
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    padding-left: 14px;
+    padding-top: 5px;
+}
+
+.fotoPerfilSugerencias img{
+    max-width: 60px;
+    margin-top: 14px;
+    border-radius: 50%;
+    border: 1px solid #c7c7c767;
+}
+
+.sugerenciasParaTi{
+    /* outline: 1px solid; */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 35px;
+}
+
+
+.sugerenciasParaTi h2{
+    color: rgba(0, 0, 0, 0.507);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+
+.sugerenciasParaTi a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.856);
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.sugerenciasDePerfiles{
+    /* outline: 1px solid; */
+    height: 38px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4px 0px;
+}
+
+.infoPerfil{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 12px;
+}
+
+.infoPerfil .nombreSugerencia{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.856);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.infoPerfil .seguir{
+    text-decoration: none;
+    color: #0095f6;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    margin-top: 7px;
+    right: 0;
+}
+
+.infoPerfil p{
+    width: 70%;
+    color: rgba(0, 0, 0, 0.500);
+    font-size: 12px;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 4px;
+}
+
+.sugerenciasDePerfiles img{
+    max-width: 35px;   
+}
+
+.terminosDeInstagram{
+    margin-top: 27px;
+    margin-bottom: 20px;
+
+}
+
+.terminosDeInstagram a{
+    text-decoration: none;
+    font-size: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #c7c7c7;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+.terminos::after{
+    content: '\00B7';
+    margin-left: 4px;
+}
+
+.footerInstagram h2{
+    text-transform: uppercase;
+    color: #c7c7c7;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+}

@@ -38,6 +38,7 @@ body{
     right: 0;
     left: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.150);
+    z-index: 10;
 }
 
 
@@ -48,18 +49,32 @@ body{
 }
 
 .logoInstagram{
-    width: 360px;
+    width: 325px;
     min-width: 40px;
 }
 
 .logoInstagram img{
-    max-width: 100px;
+    max-width: 104px;
     padding-top: 10px;
 }
 
 .buscador input{
     width: 215px;
-    height: 25px;
+    height: 20px;
+    border: solid 1px #dbdbdb;
+    border: solid 1px rgba(var(--b6a,219,219,219),1);
+    border-radius: 3px;
+    color: #262626;
+    color: rgba(var(--i1d,38,38,38),1);
+    outline: 0;
+    padding: 3px 0px 3px 0px;
+    margin-left: 35px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    opacity: 75%;
+    text-align: center;
+    z-index: 2;
 }
 
 .herramientas{
@@ -77,10 +92,12 @@ body{
 
 .herramientas img{
     max-width: 32px;
+    opacity: 90%;
 }
 
 .herramientas .perfil{
     max-width: 24px;
+    padding-left: 7px;
 }
 
 /* Stories */
@@ -117,19 +134,19 @@ body{
     align-items: center;
     justify-content: center;
     max-width: 65px;
-    border: 2px solid;
+    border: 2px solid transparent;
     border-radius: 50%;
     box-sizing: border-box;
-    border-color:linear-gradient(45deg, #ff8400,#72d81e,#dc2743,#cc2366,#bc1888); 
+    background: linear-gradient(45deg, rgba(245,160,77,1) 0%, rgba(160,15,139,1) 100%); 
 }
 
 .stories .usuario{
     text-align: center;
     padding: 3px 5px;
     text-decoration: none;
-    font-family: Helvetica;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: lighter;
-    font-size: 11px;
+    font-size: 12px;
     color: rgba(0, 0, 0, 0.829);
     letter-spacing: .01em;
 }
@@ -137,9 +154,6 @@ body{
 .stories .usuario h2{
     padding-top: 4px;
 }
-
-
-
 
 /* Publicaciones del Inicio  */
 
@@ -152,7 +166,7 @@ body{
 
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     border: 1px solid rgba(0, 0, 0, 0.150);
     border-radius: 3px;
 }
@@ -169,17 +183,14 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding-left: 10px;
-    width: 100px;
+    width: 150px;
     height: auto;
 }
 
 .headerPost .fotoPerfilUsuario{
     max-width: 40px;
     margin-left: 10px;
-    border: 2px solid;
     border-radius: 50%;
-    box-sizing: border-box;
-    border-color:linear-gradient(45deg, #ff8400,#72d81e,#dc2743,#cc2366,#bc1888); 
 }
 
 .nombreUsuario, .locacion{
@@ -238,7 +249,7 @@ body{
 .cantidadLikes h2{
     color: rgba(0, 0, 0, 0.856);
     font-size: 15px;
-    font-family: Helvetica;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 200;
 }
 
@@ -246,14 +257,14 @@ body{
     text-decoration: none;
     color: rgba(0, 0, 0, 0.856);
     font-size: 15px;
-    font-family: Helvetica;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
 }
 
 .descripcionPublicacion{
     display: flex;
     align-items: center;
-    padding: 12px 14px;
+    padding: 8px 14px;
 }
 
 .descripcionPublicacion a{
@@ -261,7 +272,7 @@ body{
     color: rgba(0, 0, 0, 0.856);
     font-size: 15px;
     letter-spacing: 0.01em;
-    font-family: Helvetica;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
 }
 
@@ -270,16 +281,20 @@ body{
     color: rgba(0, 0, 0, 0.856);
     font-size: 14px;
     letter-spacing: 0.01em;
-    font-family: Helvetica;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 100;
+}
 
+.descripcionPublicacion p span{
+    cursor: pointer;
+    color: #006fb9;
 }
 
 .comentariosPublicacion{
     display: flex;
     align-items: center;
     padding: 0px 14px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
 .comentariosPublicacion a{
@@ -287,7 +302,7 @@ body{
     color: rgba(0, 0, 0, 0.856);
     font-size: 15px;
     letter-spacing: 0.01em;
-    font-family: Helvetica;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
 }
 
@@ -296,13 +311,57 @@ body{
     color: rgba(0, 0, 0, 0.856);
     font-size: 14px;
     letter-spacing: 0.01em;
-    font-family: Helvetica;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 100;
 }
 
 .comentariosPublicacion span{
     cursor: pointer;
     color: #006fb9;
+}
+
+.tiempoPost{
+    padding: 0px 14px;
+    margin-bottom: 12px;
+}
+
+.tiempoPost a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    color: #8e8e8e;
+}
+
+.cantidadComentarios{
+        padding: 0px 14px;
+        margin-bottom: 9px
+}
+
+.cantidadComentarios a{
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: .2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    color: #8e8e8e;
+}
+
+.añadirComentario{height: 55px;}
+.añadirComentario input{
+    height: 50px;
+    width: 97%;
+    border: solid 1px #dbdbdb;
+    border: solid 1px rgba(var(--b6a,219,219,219),1);
+    border-right-color: transparent;
+    border-left-color: transparent;
+    color: #262626;
+    border-bottom-color: transparent;
+    color: rgba(var(--i1d,38,38,38),1);
+    font-size: 14px;
+    outline: 0;
+    padding-left: 17px;
+    opacity: 70%;
 }
 
 .contenedor .contenido2{
@@ -314,7 +373,7 @@ body{
 
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     border: 1px solid rgba(0, 0, 0, 0.150);
     border-radius: 3px;
 }
@@ -328,10 +387,103 @@ body{
 
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     border: 1px solid rgba(0, 0, 0, 0.150);
     border-radius: 3px;
 }
+
+
+.contenedor .contenido4{
+    background: #fff;
+    color: rgba(0, 0, 0, 0.856);
+    grid-column-start: 1 ;
+    grid-column-end: 1 ;  
+    grid-row: 6 / 7;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    border-radius: 3px;
+}
+
+
+.contenedor .contenido5{
+    background: #fff;
+    color: rgba(0, 0, 0, 0.856);
+    grid-column-start: 1 ;
+    grid-column-end: 1 ;  
+    grid-row: 7 / 8;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    border-radius: 3px;
+}
+
+
+.contenedor .contenido6{
+    background: #fff;
+    color: rgba(0, 0, 0, 0.856);
+    grid-column-start: 1 ;
+    grid-column-end: 1 ;  
+    grid-row: 8 / 9;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    border-radius: 3px;
+}
+
+
+.contenedor .contenido7{
+    background: #fff;
+    color: rgba(0, 0, 0, 0.856);
+    grid-column-start: 1 ;
+    grid-column-end: 1 ;  
+    grid-row: 9 / 10;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    border-radius: 3px;
+}
+
+
+.contenedor .contenido8{
+    background: #fff;
+    color: rgba(0, 0, 0, 0.856);
+    grid-column-start: 1 ;
+    grid-column-end: 1 ;  
+    grid-row: 10 / 11;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    border-radius: 3px;
+}
+
+
+.contenedor .contenido9{
+    background: #fff;
+    color: rgba(0, 0, 0, 0.856);
+    grid-column-start: 1 ;
+    grid-column-end: 1 ;  
+    grid-row: 11 / 12;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    border-radius: 3px;
+}
+
+
+
 
 /* Sugerencias de perfiles y Terminos de Instagram  */
 .contenedor .sidebarSugerencias{
@@ -346,7 +498,6 @@ body{
     }
 
 .sidebarSugerencias .sugerencias{
-    /* outline: 1px solid; */
     width: 300px;
     position: fixed;
     margin-left: 6px;
@@ -357,7 +508,6 @@ body{
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    /* outline: 1px solid; */
     margin: 10px 0px;
 }
 
@@ -386,7 +536,7 @@ body{
 
 .fotoPerfilSugerencias img{
     max-width: 60px;
-    margin-top: 14px;
+    margin-top: 12px;
     border-radius: 50%;
     border: 1px solid #c7c7c767;
 }
@@ -399,7 +549,6 @@ body{
     align-items: flex-end;
     height: 35px;
 }
-
 
 .sugerenciasParaTi h2{
     color: rgba(0, 0, 0, 0.507);
@@ -418,12 +567,15 @@ body{
 }
 
 .sugerenciasDePerfiles{
-    /* outline: 1px solid; */
     height: 38px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 4px 0px;
+}
+
+.sugerenciasDePerfiles img{
+    border-radius: 50%;
 }
 
 .infoPerfil{
@@ -433,11 +585,19 @@ body{
 }
 
 .infoPerfil .nombreSugerencia{
+    display: flex;
+    align-items: center;
+    width: 100px;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.856);
     font-size: 14px;
     font-weight: 500;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.infoPerfil .nombreSugerencia img{
+    padding-left: 4px;
+    max-width: 16px
 }
 
 .infoPerfil .seguir{
@@ -460,9 +620,7 @@ body{
     padding-top: 4px;
 }
 
-.sugerenciasDePerfiles img{
-    max-width: 35px;   
-}
+.sugerenciasDePerfiles img{max-width: 35px;}
 
 .terminosDeInstagram{
     margin-top: 27px;
@@ -487,7 +645,135 @@ body{
 .footerInstagram h2{
     text-transform: uppercase;
     color: #c7c7c7;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 11px;
     font-weight: 400;
     line-height: 13px;
 }
+
+
+/* Media queris */
+
+@media screen and (max-width: 320px){
+    header .navegacion .buscador{display: none;}
+    header .navegacion .herramientas{display: none;}
+    header .navegacion .logoInstagram{width: auto;}
+
+    .contenedor .sidebarSugerencias{display: none;}
+    .contenedor .sugerencias{display: none;}
+    .contenedor .stories{
+        grid-column-start: 1 ;
+        grid-column-end: 4 ; 
+        grid-row-start: 2;
+        grid-row-end: 1;
+    }
+    .contenedor .contenido1{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido2{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido3{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido4{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido5{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido6{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido7{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido8{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido9{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .añadirComentario input {width: 93%;}
+}
+
+
+@media screen and (max-width: 1000px){
+    header .navegacion .buscador{display: none;}
+    header .navegacion .herramientas{display: none;}
+    header .navegacion .logoInstagram{width: auto;}
+    
+    .contenedor .sidebarSugerencias{display: none;}
+    .contenedor .sugerencias{display: none;}
+    .contenedor .stories{
+        grid-column-start: 1 ;
+        grid-column-end: 4 ; 
+        grid-row-start: 2;
+        grid-row-end: 1;
+    }
+    .contenedor .contenido1{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido2{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido3{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido4{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido5{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido6{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido7{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido8{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .contenedor .contenido9{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-bottom: 12px;
+    }
+    .añadirComentario input {width: 92%;}
+}
+
